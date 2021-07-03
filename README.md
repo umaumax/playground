@@ -15,6 +15,11 @@
   }
 )
 
+```plantuml
+Bob -> Alice : hello
+Alice -> Bob : hi
+```
+
 ``` dot
   digraph G {
     CoreData [shape=box]
