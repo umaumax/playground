@@ -15,8 +15,8 @@ Alice <-- Bob: another authentication Response
 
 ' title clip-share
 
-participant "local" as Local
-participant "remote" as Remote
+'participant "local" as Local
+'participant "remote" as Remote
 
 loop monitoring clipboard
     opt if local local clipboard has changed
