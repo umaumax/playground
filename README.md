@@ -2,6 +2,11 @@
 
 ### lang = packetdiag
 ```mermaid
+graph TD
+    Start --> Stop
+```
+
+```mermaid
 CAR {
         string registrationNumber
         string make
