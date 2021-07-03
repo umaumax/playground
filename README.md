@@ -1,7 +1,7 @@
 # playground
 
 
-```plantuml
+```uml
 @startuml
 
 participant "local" as Local
