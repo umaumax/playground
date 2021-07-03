@@ -1,5 +1,8 @@
 # playground
 
+自由に編集して、いつでも消去してもよい用途のリポジトリ
+
+
 ### lang = packetdiag
 ```mermaid
 graph TD
