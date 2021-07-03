@@ -15,6 +15,24 @@
   }
 )
 
+``` dot
+  digraph G {
+    CoreData [shape=box]
+    FLMAssetFetchService [shape=box]
+    AppDelegate -> FLMAssetFetchService [label="1.start"]
+    FLMAssetFetchService -> FLMAssetFetchOperation [label="2.Kick"]
+    FLMAssetFetchOperation -> FLMAssetFetchService [label="3.NSNotification(FetchedAsset)"]
+    FLMAssetFetchOperation -> FLMFetchedAssetTransformer [label="ALAsset or PHAsset"]
+    FLMFetchedAssetTransformer -> FLMAssetFetchOperation [label=FLMFetchedAsset]
+    FLMAssetFetchService -> "FLMAssetStoreOperation" [label="4.FetchedAsset"]
+    "FLMAssetStoreOperation" -> CoreData [label="5.Commit FLMPhoto, FLMAlbum"]
+    "FLMAssetStoreOperation" -> App [label="6.Notify via NSNotification"]
+  }
+```
+
+https://raw.githubusercontent.com%2FTLmaK0%2Fgravizo%2Fmaster%2FREADME.md)
+https://raw.githubusercontent.com/TLmaK0/gravizo/master/README.md
+
 ![Alt text](https://g.gravizo.com/source/custom_mark13?https%3A%2F%2Fraw.githubusercontent.com%2FTLmaK0%2Fgravizo%2Fmaster%2FREADME.md)
 <details> 
 <summary></summary>
