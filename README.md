@@ -16,8 +16,6 @@ Alice <-- Bob: another authentication Response
 participant "local" as Local
 participant "remote" as Remote
 
-== ssh ==
-
 loop monitoring clipboard
     opt if local local clipboard has changed
         activate Local
