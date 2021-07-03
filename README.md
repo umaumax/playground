@@ -18,6 +18,7 @@ Alice <-- Bob: another authentication Response
 ```plantuml
 @startuml
 
+'comment
 
 loop monitoring clipboard
     opt if local local clipboard has changed
