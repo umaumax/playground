@@ -13,6 +13,8 @@ Alice <-- Bob: another authentication Response
 ```plantuml
 @startuml
 
+title clip-share
+
 participant "local" as Local
 participant "remote" as Remote
 
