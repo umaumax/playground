@@ -10,13 +10,14 @@ Alice <-- Bob: another authentication Response
 @enduml
 ```
 
+'title clip-share
+'participant "local" as Local
+'participant "remote" as Remote
+
+
 ```plantuml
 @startuml
 
-' title clip-share
-
-'participant "local" as Local
-'participant "remote" as Remote
 
 loop monitoring clipboard
     opt if local local clipboard has changed
