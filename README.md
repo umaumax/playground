@@ -12,47 +12,6 @@ Alice <-- Bob: another authentication Response
 
 hoge
 
-```plantuml
-@startuml
-
-title clip-share
-
-participant "local" as Local
-participant "remote" as Remote
-
-== ssh ==
-
-loop monitoring clipboard
-    opt if local local clipboard has changed
-        activate Local
-        Local -> Remote: send clipboard via ssh tunnel
-        note right #lightgreen: base64\nformat
-        Remote -> Remote: update clipboard
-    end
-
-    opt if remote clipboard has changed
-        activate Remote
-        Remote -> Local: send clipboard via ssh tunnel
-        note left #lightgreen: base64\nformat
-        Local -> Local: update clipboard
-    end
-
-    break ctrl-c
-    end
-end
-
-@enduml
-```
-
-gua
-
-```plantuml
-Bob -> Alice : hello
-Alice -> Bob : hi
-```
-
-hoge
-
 ``` dot
   digraph G {
     CoreData [shape=box]
