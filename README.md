@@ -1,27 +1,7 @@
 # playground
 
+
 ```uml
-@startuml
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
-
-title clip-share
-
-participant "local" as Local
-participant "remote" as Remote
-
-== ssh ==
-
-@enduml
-```
-
-'title clip-share
-
-
-```plantuml
 @startuml
 
 participant "local" as Local
